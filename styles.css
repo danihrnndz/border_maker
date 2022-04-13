@@ -28,7 +28,6 @@ body {
   width: max-content;
   margin: auto;
   padding: 1rem;
-  border: 1px solid black;
 }
 
 .header .header_tittle {
@@ -66,16 +65,48 @@ body {
   margin: 5rem;
 }
 
-.box_container .range1 {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  -ms-grid-column-align: left;
-      justify-self: left;
+.box_container .box_wrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 300px 20px;
+      grid-template-columns: 20px 300px 20px;
 }
 
-.box_container .box {
+.box_container .box_wrap .range_top {
+  grid-column: span 3;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 320px;
+}
+
+.box_container .box_wrap .range_left {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 320px;
+}
+
+.box_container .box_wrap .box {
   height: 300px;
   width: 300px;
   background-color: var(--bg_darker);
+}
+
+.box_container .box_wrap .range_right {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 320px;
+}
+
+.box_container .box_wrap .range_bottom {
+  grid-column: span 3;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 320px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 /*# sourceMappingURL=styles.css.map */

@@ -22,7 +22,6 @@ body {
 
     margin: auto;
     padding: 1rem;
-    border: 1px solid black;
 
     .header_tittle {
         font-size: 3rem;
@@ -57,15 +56,43 @@ body {
     justify-content: center;
     margin: 5rem;
 
-    .range1 {
-        transform: rotate(90deg);
-        justify-self: left;
+    .box_wrap {
+        display: grid;
+        grid-template-columns: 20px 300px 20px;
+        
+        .range_top {
+            grid-column: span 3;
+            justify-self: center;
+            width: 320px;
+        }
+        
+        .range_left {
+            transform: rotate(90deg);
+            justify-self: center;
+            width: 320px;
+        }
+    
+        .box {
+            height: 300px;
+            width: 300px;
+            background-color: var(--bg_darker);
+    
+        }
+
+        .range_right {
+            transform: rotate(270deg);
+            justify-self: center;
+            width: 320px;
+        }
+
+        .range_bottom {
+            grid-column: span 3;
+            justify-self: center;
+            width: 320px;
+            transform: rotate(180deg);
+        }
+
     }
 
-    .box {
-        height: 300px;
-        width: 300px;
-        background-color: var(--bg_darker);
-
-    }
+    
 }
